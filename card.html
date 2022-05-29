@@ -1,0 +1,169 @@
+<html>
+    <head>
+
+    </head>
+    <style>
+  * {
+        margin: 0;
+        padding: 0;
+        font-family: cursive;
+        box-sizing: border-box;
+        text-decoration: none;
+        scroll-behavior: smooth;
+    }
+    .main{
+        width:100%;
+        padding:100px;
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+        perspective:2000px;
+    }
+    .card{
+        width:275px;
+        height:340px;
+        overflow: hidden;
+        background-color:#6b97c0;
+        border-radius:38px;
+        margin:12px 68px;
+        box-shadow:0 0 20px 0 #000000;
+  
+        
+    }
+    .imagebox{
+        width:100%;
+        height:234px;
+        background-color:rgb(138,10,10);
+       
+    }
+    .image{
+        width:100%;
+        height:100%;
+    
+       
+
+    }
+    .content{
+     
+        background-color: #6b97c0;
+        font-weight:bold;
+        padding:0px;
+        width:100%;
+
+    }
+    .content h2{
+        font-size:23px;
+        width:100%;
+        font-weight: bold;
+        color:rgb(138,10,10) !important;
+        text-shadow:0.05em 0.05em 2em #232323;
+       padding-top:25px;
+       margin-left:8%;
+    }
+    a{
+        color:rgb(138,10,10);
+    }
+    .content h4{
+  
+        transform:translate(0%,150%);
+        font-size:19px;
+         padding:12px;
+         text-align: left;
+         margin-left:8%; 
+         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         text-shadow:0.05em 0.05em 2em rgb(138,10,10); 
+         opacity:80%;
+        
+        
+    }
+    .card:hover h4{
+        transform:translate(0%,0%);
+        transition:0.7s ease-in-out;
+       
+    }
+    .card:hover .imagebox
+    {
+        border-radius:0% 0% 0% 80%;
+        transition:0.7s ease-in-out;
+    }
+    .card:hover .image{
+         margin:-10px 22px;
+         transition:0.7s ease-in-out;
+    }
+    .card:hover h2{
+        padding-top:10px;
+       transition:0.7s ease-in-out;
+    }
+  
+    @media screen and (max-width:850px)
+    {
+     
+        .main{
+        width:auto;
+        display: flex;
+        /* justify-content:space-around; */
+        align-items: center;
+        flex-wrap: wrap;
+        padding:0px;
+        
+    }
+        .card{
+        width:100%;
+        overflow: hidden;
+        border:2px solid black;
+        background-color:#6b97c0;
+        border-radius:30px;
+        margin-top:10px;
+        
+    }
+    .imagebox{
+        width:100%;
+        height:234px;
+        background-color:rgb(138,10,10);
+       
+    }
+    .content{
+     
+        background-color: #6b97c0;
+        font-weight:bold;
+        padding:0px;
+        width:100%;
+
+    }
+   
+    }
+    </style>
+    <body>
+        <h1> Welcome practise </h1>
+        <div class="main">
+          <div class="card">
+             <div class="imagebox">
+                 <img src="cake1.png"class="image">
+             </div>
+             <div class="content">
+                 <h2> <a href="order.php">Special yellow cake</a></h2>
+                 <h4>200/- </h4>
+             </div>
+          </div>
+          
+          <div class="card">
+            <div class="imagebox">
+                <img src="cake1.png"class="image">
+            </div>
+            <div class="content">
+                <h2> Special yellow cake</h2>
+                <h4>200/- </h4>
+            </div>
+         </div>
+         <div class="card">
+            <div class="imagebox">
+                <img src="cake1.png"class="image">
+            </div>
+            <div class="content">
+                <h2> Special yellow cake</h2>
+                <h4>200/- </h4>
+            </div>
+         </div>
+          </div>
+    </body>
+</html>

@@ -1,0 +1,300 @@
+<html>
+    <head>
+        <title>
+            About 
+        </title>
+        <link href="aos.css" rel="stylesheet">
+        <link href="all.min.css">
+    </head>
+    <style>
+        *
+        {
+            margin: 0;
+            padding:0;
+            font-family: cursive;
+            box-sizing: border-box;
+            text-decoration: none;
+            scroll-behavior: smooth;
+        }
+        body{
+              /* background-color:rgb(138,10,10); */
+              /* background-color:#003442; */
+              background:linear-gradient(to bottom,#232323,#003442,#232323);
+            
+        }
+        .bg {
+          
+              width:100%;
+              height:1000px;
+              border-radius:50%;
+              
+        }
+        .imagebox
+        {
+            width:97%;
+            height:98%;
+            margin-left:10px;
+            /* border-radius:100px 20px 20px 20px; */
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+            
+           
+            
+        } 
+        .myimage  
+        {
+          width:90%;
+          filter:drop-shadow(5px 40px 50px #000000);
+        
+
+
+                            }
+        .about{
+             display: flex;
+             flex-direction: row-reverse;
+             justify-content: center;
+             width:100%;
+             height:100%;
+        }
+        .firstimg
+        {
+           
+            /* background-color:#6b97e9; */
+            word-wrap: break-word;
+            
+            font-size:26px;
+           
+             font-weight:bolder;
+             text-shadow:0 2px 20px rgb(138,10,10);
+      
+        }
+        .firstimg h3{
+            margin-top:17%;
+            padding:8%;
+            color:#6b97c0;
+
+        }
+        h1{
+             font-size:60px;
+             margin-bottom:30px;
+             color:#6b97c0;
+             width:100%;
+             text-align:center;
+             
+        }
+        .name
+        {  
+              width:375px;
+            margin-top:20px;
+            color:#6b97c0;
+            text-align:right;
+        }
+        .firstcard {
+		color:rgb(138,10,10);
+		bottom: 0;
+
+
+	}
+
+	.b-text {
+
+		padding: 26px 20px;
+        text-shadow:0em 0.0522em 0em #003442;  
+
+	}
+
+	.secondcard {
+
+		padding: 10px 40%;
+
+	}
+
+	.atag {
+		color: #232323;
+		justify-content: center;
+		align-items: center;
+		display: flex;
+
+	}
+
+	.fa {
+		margin-left: 18px;
+		margin-right: 3px;
+		border:1px solid rgb(138,10,10);
+		font-size:10px;
+		 padding:7px 7px;
+		 border-radius: 50%;
+
+	}
+
+	.copyright,
+	.logo-text {
+		justify-content: center;
+		align-items: center;
+		display: flex;
+	}
+
+	.insta {
+		color: black;
+	}
+
+	.icon {
+		display: none;
+		transform: rotate(90deg);
+	}
+
+	.f-logos {
+        width:6%;
+		display: flex;
+		justify-content:space-between;
+		align-items: center;
+	}
+    .fimage {
+		width: 50px;
+		height: 100%;
+		border-radius: 50%;
+		padding: 22px 0;
+		/* border: 2px solid brown;
+		margin-top: 32px;
+		margin-right:45%;
+		margin-bottom: 19px; */
+	}
+    .footer {
+		width:100%;
+		height: auto;
+		background-color:#6b97c0;
+		padding: 20px;
+		overflow: hidden;
+        margin-top: 5%;
+	}
+
+
+        @media screen and (max-width:850px) {
+            .about{
+             display: flex;
+             flex-direction:column-reverse;
+             justify-content: center;
+             width:100%;
+             height:auto;
+        }
+        .firstimg h3{
+            top:0;
+            margin-top:5%;
+            font-size:23px;
+                
+        }
+        .name
+        {  
+            width:375px;
+            color:#6b97c0;
+            font-size:24px;
+            float:right;
+            text-align: right;
+            margin-right:5%;
+        }
+        .myimage  
+        {
+          width:80%;
+          margin-top: 0%;
+          top:0;
+
+        }
+        
+        .imagebox
+        {
+            width:100%;
+            height:100%;
+            margin-left: 0px;
+            padding:12px 12px 0px 12px;
+            /* border-radius:100px 20px 20px 20px; */
+        } 
+        .footer {
+			width: 100%;
+			height: auto;
+			background-color:#6b97c0;
+			padding: 0px;
+
+
+
+		}
+
+		.secondcard {
+
+			padding: 10px 30%;
+
+		}
+           .f-logos{
+			   padding-bottom:30px;
+               width:25%;
+		display: flex;
+		justify-content:space-between;
+		align-items: center;
+
+		   }
+		.atag {
+			color: #232323;
+
+		}
+
+         
+		}
+  
+    </style>
+    <body>
+        <script src="aos.js"></script>
+        <script>
+            AOS.init();
+            AOS.init({
+                duration:1800,
+            });
+        </script>
+           <script src="all.js"></script>
+       <div class="about">
+
+                  
+        
+      <div class="firstimg" data-aos="fade-up">
+        
+          <h3>
+            This will be a website for my mother's homemade bakery. We focus on Birthday and Party Cakes Only.We would like to take
+            special orders and referals from our friends.we would like to accept online payments </h3>
+            <h2 class="name"> - Kartik Dhumal </h2>
+        </div>
+        
+            <div class="imagebox">
+                <img src="myimage2.png" class="myimage" data-aos="fade-down"><img>
+            </div>
+    
+        </div>
+        <footer class="footer">
+            <div class="firstcard" data-aos="fade-down">
+                <div class="logo-text">
+                    <img src="logo.jfif" class="fimage"> </img>
+    
+                    <h2 class="b-text"> Kittu Bakers </h2>
+                </div>
+    
+    
+    
+    
+                <h5 class="copyright">Copyright @ 2022 Kittubakers</h5><br>
+                <h5><a href="#" class="atag"> Privacy Policy Terms of use</a></h5>
+                <br>
+                <center><div class="f-logos">
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-facebook"></a>
+                    <a href="https://instagram.com/kartik_dhumal.__?utm_medium=copy_link" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+    
+                </div>
+                </center>
+            </div>
+    
+        </footer>
+
+    </body>
+</html>
+

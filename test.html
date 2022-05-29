@@ -1,0 +1,199 @@
+<?php
+
+
+
+?>
+
+
+
+
+
+
+
+
+
+<html>
+    <head>
+        <script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.min.css">
+        <link href="all.min.css"> 
+        <style>
+     * {
+            margin: 0;
+            padding:0;
+            font-family: cursive;
+            box-sizing: border-box;
+            text-decoration: none;
+            scroll-behavior: smooth;
+        }
+        body{
+            background:linear-gradient(to bottom,#232323,#003442,#232323);
+        }
+        .form {
+        width:350px;
+        height:100%;
+        text-align: center;
+
+
+
+    }
+      .formbox{
+          width:100%;
+          height:100%;
+          border:2px solid red;
+          display:flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .register{
+          width:100%;
+          border:2px solid red;
+      }
+      input{
+        width:100%;
+        float: left;
+        padding:7px 0;
+        border:none;
+        border-radius:10px;
+        background:none;
+        border:none;
+        border-bottom:3px solid #6b97c0;
+        outline:none;  
+        color:white;
+        padding-left:10px;
+        font-size:18px;
+      }
+      .registertable {
+        padding:24px 0;
+        font-size: 17px;
+        margin:25px 0;
+        box-shadow:0 0 10px 0 #000000;
+        width:100%;
+        background:linear-gradient(to left,#232323,#003442,#232323);
+        box-shadow:0 0 10px 0 #000000;
+        
+       }
+       label{
+        color: #6b97c0;
+       }
+       #submit{
+           width:100%;
+           background-color: rgb(138,10,10);
+           border:none;
+           margin:10px 0;
+           padding:4px 3px;
+       }
+       #icon_login{
+           margin-left:90%;
+           margin-top:-10%;
+           font-size: 14px;
+    
+       }
+        </style>
+         
+    </head>
+    <body>
+        <script src="all.js"></script>
+        <script>
+            function logIn()
+            {
+               var x = document.getElementById("password");
+               var z = document.getElementById("icon_login");
+                if(document.getElementById("password").type == "password" )
+                {
+                    document.getElementById("password").type="text";
+                    z.className="fa fa-eye-slash";
+                   
+                }
+                else{
+                    document.getElementById("password").type="password";
+                    z.className += "fa fa-eye";
+                }
+            }
+            function logInTwo()
+            {
+               var y = document.getElementById("password");
+                if(document.getElementById("confirmpassword").type === "password" )
+                {
+                    document.getElementById("confirmpassword").type="text";
+                }
+                else{
+                    document.getElementById("confirmpassword").type="password";
+                }
+            }
+            function validate()
+            {
+                var fn = document.getElementById('firstname').value;
+                var ln = document.getElementById('lastname').value;
+                var em = document.getElementById('email').value;
+                var pw= document.getElementById('password').value;
+                var cpw = document.getElementById('confirmpassword').value;
+                if(fn=="")
+                {
+                    alert("Please Enter your first name");
+                    return;
+                }
+                else if(ln=="")
+                {
+                    alert("Please Enter your Last name");
+                    return;
+                }
+                else if(em=="")
+                {
+                    alert("Please Enter your Email Address");
+                    return;
+                }
+                else if(pw=="")
+                {
+                    alert("Please Enter your Password");
+                    return;
+                }
+                else if(cpw=="")
+                {
+                    alert("Please Enter the password again");
+                    return;
+                }
+                else if(pw!=cpw)
+                {
+                    alert("Password and Confirm password should be same!");
+                    cpw.focus();
+                }
+                else {
+
+                    Swal.fire({
+                        position:'top-end',
+                        icon:'success',
+                        title:'Registration Successfull',
+                        showConfirmButton:false,
+                        timer:1500
+                    })
+                }
+            }
+        </script>
+        <div class="formbox">
+            <div class="forms">
+                <div class="register">
+                  <form action="" class="form">
+                      <table class="registertable">
+                          <tr><td><label for=""> First name </label></td></tr>
+                          <tr><td><input type="text" id="firstname"  name="firstname" required pattern="[a-zA-Z\s]+"></td></tr>
+                          <tr><td><label for=""> Last name </label></td></tr>
+                          <tr><td><input type="text" id="lastname" name="lastname" required pattern="[a-zA-Z\s]+"></td></tr>
+                          <tr><td><label for=""> Email </label></td></tr>
+                          <tr><td><input type="Email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></td></tr>
+                          <tr><td><label for=""> Password </label></td></tr>
+                          <tr><td><input type="Password" id="password" name="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"><span><i class="fa fa-eye"  id="icon_login" onclick="logIn();" style="color:white;"></i></span></td></tr>
+                          <tr><td><label for=""> Confirm Password </label></td></tr>
+                          <tr><td><input type="Password" id="confirmpassword" name="confirmpassword" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"><span><i class="fa fa-eye"  id="icon_login" onclick="logInTwo();" style="color:white;"></i></span></td></tr>
+            
+                          <tr><td align="center" style="align-items: center;"><input type="submit" id="submit" onclick="validate();" name="submit" value="Register"></td></tr>
+                      </table>
+                  </form>
+                </div>
+                <div class="login">
+        
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

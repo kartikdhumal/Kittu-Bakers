@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Kittu Bakers </title>
+	<link href="aos.css" rel="stylesheet">
+      <link href="all.min.css"> 
+	  <script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.min.css">
+	
+</head>
+<script type="text/javascript">
+	function responsive() {
+		var x = document.getElementById("navigation");
+		if (x.className === "nav") {
+			x.className += " responsive";
+		}
+		else {
+			x.className = "nav";
+	
+		}
+	}
+	function order() {
+		window.location = "cake.php";
+	}
+	function moreabout() {
+		window.location = "about.html";
+	}
+	function logIn()
+            {
+               var x = document.getElementById("password");
+               var z = document.getElementById("icon_login");
+                if(document.getElementById("password").type == "password" )
+                {
+                    document.getElementById("password").type="text";
+                    z.className="fa fa-eye-slash";
+                    document.getElementById("icon_login").style.color="rgb(138,10,10)";
+                   
+                }
+                else{
+                    document.getElementById("password").type="password";
+                    z.className="fa fa-eye";
+                    document.getElementById("icon_login").style.color="white";
+                }
+            }
+            function logInTwo()
+            {
+               var y = document.getElementById("password");
+                if(document.getElementById("confirmpassword").type === "password" )
+                {
+                    document.getElementById("confirmpassword").type="text";
+                    document.getElementById("icon_login2").style.color="rgb(138,10,10)";
+                }
+                else{
+                    document.getElementById("confirmpassword").type="password";
+                    document.getElementById("icon_login2").style.color="white";
+                }
+            }
+            function logInThree()
+            {
+                if(document.getElementById("mypassword").type === "password" )
+                {
+                    document.getElementById("mypassword").type="text";
+                    document.getElementById("icon_login3").style.color="rgb(138,10,10)";
+                }
+                else{
+                    document.getElementById("mypassword").type="password";
+                    document.getElementById("icon_login3").style.color="white";
+                }
+            }
+            function validate()
+            {
+                var fn = document.getElementById('firstname').value;
+                var ln = document.getElementById('lastname').value;
+                var em = document.getElementById('email').value;
+                var pw= document.getElementById('password').value;
+                var cpw = document.getElementById('confirmpassword').value;
+                if(fn=="")
+                {
+                    alert("Please Enter your first name");
+                    return;
+                }
+                else if(ln=="")
+                {
+                    alert("Please Enter your Last name");
+                    return;
+                }
+                else if(em=="")
+                {
+                    alert("Please Enter your Email Address");
+                    return;
+                }
+                else if(pw=="")
+                {
+                    alert("Please Enter your Password");
+                    return;
+                }
+                else if(cpw=="")
+                {
+                    alert("Please Enter the password again");
+                    return;
+                }
+                else if(pw!=cpw)
+                {
+                    alert("Password and Confirm password should be same!");
+                    cpw.focus();
+                }
+                else {
+                    return true;
+                  
+                }
+            }
+            function validatetwo()
+            {
+                var myemail = document.getElementById("myemail").value;
+                var mypassword = document.getElementById("mypassword").value;
+
+                 
+                if(myemail=="")
+                {
+                    alert("Please Enter Your Email Address");
+                    return;
+                }
+                else if(mypassword=="")
+                {
+                    alert("Please Enter Your Password");
+                    return;
+                }
+                else{
+                    return true;
+                }
+                
+               
+               
+
+            }
+            function log_btn()
+            {
+                var ab = document.getElementById("registertable").style;
+                var cd = document.getElementById("logintable").style;
+                document.getElementById("registertable").style.marginLeft="-300px";
+                document.getElementById("logintable").style.marginLeft="auto";
+                document.getElementById("registertable").style.transition="1s ease-in-out";
+                document.getElementById("logintable").style.transition="1s ease-in-out";
+            }
+            function reg_btn()
+            {
+                document.getElementById("registertable").style;
+                document.getElementById("logintable").style;
+                document.getElementById("registertable").style.marginLeft="0px";
+                document.getElementById("logintable").style.marginLeft="7%";
+                document.getElementById("registertable").style.transition="0.8s ease-in";
+                document.getElementById("logintable").style.transition="0.8s ease-in";
+            }
+			function form()
+			{
+				if(document.getElementById('forms').style.marginTop =="-163%")
+				{
+					document.getElementById('forms').style.marginTop="0%";
+				
+				}
+				else{
+					document.getElementById('forms').style.marginTop="-163%";
+					
+				}
+				
+				
+			}
+</script>
+
+
+<style type="text/css">
+
+	* {
+		margin: 0;
+		padding: 0;
+		font-family:cursive;
+		list-style-type: none;
+		text-decoration: none;
+		box-sizing: border-box;
+	
+
+	}
+	
+
+  body{
+	background:linear-gradient(to bottom,#003442,#232323);
+  }
+	.nav {
+		background:#6b97c0;
+		color: rgb(218, 208, 188);
+		height: 60px;
+		top: 0%;
+		width: 100%;
+		overflow: visible;
+		z-index:3;
+		
+	}
+
+	.nav ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: right;
+	}
+
+	.nav ul li:not(:first-child) {
+		padding: 12px 60px;
+		font-size: 20px;
+		text-align: center;
+		height: 100%;
+		width:auto;
+		line-height:auto;
+		float: center;
+		position: relative;
+		opacity:82%;
+	}
+	
+
+	a {
+		color: white;
+	}
+
+	.nav ul li a
+	{
+       color:#003442;
+	}
+
+	.nav ul li a:hover {
+		color:rgb(138, 10, 10);
+	}
+   .logobox{
+	   width:35%;
+   }
+  
+	.logo {
+		width:auto;
+		height:55px;
+		line-height:55px;
+		float:left;
+		font-size:32px;
+        color:rgb(138, 10, 10);
+		text-shadow:0em 0.0522em 0em #003442;   
+		z-index:3;
+		font-weight: bold;
+	
+
+	}
+
+	.firstimg {
+		background:linear-gradient(to top,#003442,#6b97c0);
+		width: 100%;
+		height: 750px;
+		z-index: 4;
+
+	}
+
+	.card {
+		width:auto;
+		height: 350px;
+		margin-left:50%;
+		padding: 20px;
+		color: rgb(138, 10, 10);
+		margin-top: -425px;
+		padding:4px;
+	
+
+	}
+
+	.btn {
+		padding:5px 80px;
+		background-color:rgb(138, 10, 10);
+		color:#6b97c0;
+		box-shadow: 0 0 10px 0 #000000;
+		border: 1px solid rgb(138, 10, 10);
+		border-radius: 60px;
+		margin-top: 30px;
+		font-size:18px;
+	
+	}
+
+	.btn:hover {
+		background-color:#6b97c0;
+		color:rgb(138, 10, 10);
+		font-weight: bold;
+
+
+	}
+
+	h1,
+	h3,
+	h2 {
+		word-wrap: break-word;
+		float: left;
+	}
+
+	.welc {
+		font-size: 55px;
+		width:100%;
+		text-align:left; 
+		color:rgb(138, 10, 10);
+		text-shadow: 0em 0.04em 0 #003442;
+		padding:12px 0px;
+		
+	   
+
+	}
+
+	.text {
+		font-size:20px;
+		word-wrap: break-word;
+		color:rgb(138, 10, 10);
+		text-shadow: 0em 0.04em 0 #003442;
+		padding:12px 0px;		
+	}
+
+	.cake {
+		width:48%;
+		height: auto;
+		margin-left:30px;
+		margin-top:0%;
+
+
+	}
+
+	.have {
+		width: 100%;
+		height: 100%;
+		color: white;
+		padding: 100px 130px;
+		background:linear-gradient(to bottom,#003442,#232323);
+		overflow: hidden;
+		display: flex;
+		flex-direction: row;
+	
+
+	}
+
+	.btn2 {
+		padding: 8px 35px;
+	    color: #6b97c0;
+		background-color: rgb(138, 10, 10);
+		width: 30%;
+		height: 20%;
+		box-shadow: 0 0 10px 0 #000000;
+
+		margin-left: 5%;
+		margin-top: 1%;
+		border: 1px solid rgb(138, 10, 10);
+		border-radius: 60px;
+	}
+
+	.que {
+		font-size: 20px;
+		color:#6b97c0;
+		text-shadow: 0em 0.09em 0 #000000;
+		
+	}
+
+	.btn2:hover {
+		color:rgb(138, 10, 10);
+
+		background-color: #6b97c0;
+		font-weight: bold;
+	}
+
+	table {
+		margin-top: 60px;
+	
+	}
+
+	.footer {
+		width:100%;
+		height: auto;
+		background-color:#6b97c0;
+		padding: 20px;
+		overflow-y: hidden;
+		box-sizing: border-box;
+	}
+
+	.fimage {
+		width: 50px;
+		height: 100%;
+		border-radius: 50%;
+		padding: 22px 0;
+		/* border: 2px solid brown;
+		margin-top: 32px;
+		margin-right:45%;
+		margin-bottom: 19px; */
+	
+	}
+
+	.firstcard {
+		color: rgb(138, 10, 10);
+		bottom: 0;
+		
+
+
+	}
+
+	.b-text {
+
+		padding: 26px 20px;
+	     font-size:32px;
+		 text-shadow:0em 0.0522em 0em #003442;  
+
+	}
+
+	.secondcard {
+
+		padding: 10px 40%;
+
+	}
+
+	.atag {
+		color: #232323;
+		justify-content: center;
+		align-items: center;
+		display: flex;
+
+	}
+	
+	   .fab {
+		margin-left: 18px;
+		margin-right: 3px;
+		border:1px solid #6b97c0;
+		font-size:10px;
+		 padding:3px 3px;
+		 border-radius: 50%;
+
+	}
+
+	.copyright,
+	.logo-text {
+		justify-content: center;
+		align-items: center;
+		display: flex;
+	}
+
+	.insta {
+		color: black;
+	}
+
+	.icon {
+		display: none;
+		transform: rotate(90deg);
+	}
+
+	.f-logos {
+		width:6%;
+		display: flex;
+		justify-content:space-between;
+		align-items: center;
+	}
+	 /* ----- video ----- */
+	 .video{
+	      
+		 width:100%;
+		 height:100vh;
+		 display: flex;
+		 justify-content: center;
+		 align-items: center;
+		 
+		 
+		
+			  
+	      }
+			  video{
+				    position:absolute;
+					
+					top:auto;
+					left:0;
+					object-fit: cover;
+					width:100%;
+					height:100vh;
+					pointer-events: none;
+					
+
+			  }
+			  .content{
+				width:100%;
+				position: relative;
+				z-index: 1;
+				max-width: 1000px;
+				margin: 0 auto;
+				text-align: center;
+			
+				
+			
+			  }
+			  .content h1{
+				  margin-top:-40%;
+				  padding: 0;
+				  font-size:4.3em;
+				  text-align: center;
+				  color:#6b97c0;
+				  text-shadow:.0em .1em 0 #000000;
+			  }
+			  /* ---------- location -------------- */
+			  .location-box
+			  {
+				  width:100%;
+				  height:auto;
+				  background:linear-gradient(to bottom,#232323,#003442,#232323);
+				  
+
+				  
+				  
+			  }
+			  .titleln{
+				  width:100%;
+				  text-align: center;
+				  font-size:40px;
+				  color:white;
+				  text-shadow:0em 0.1em 0 rgb(138, 10, 10);
+				  padding:30px;
+			  }
+			  .location
+			  {
+				  width:100%;
+				  display: flex;
+				  justify-content:space-around; 
+				  align-items: center;
+				  padding:37px;
+				
+				 
+				
+			  }
+			  .firstln{
+			     font-size:19px;
+				 width:80%;
+				 height:240px;
+			     border-radius:5%;
+				 margin:20px;
+				 box-shadow: 0 10px 0px 13px rgb(138, 10, 10);
+				 
+				 
+			  }
+		
+			  .firstln h5{
+                 text-align:center;
+				 font-size:30px;
+				 padding:7px;
+				 color:#6b97c0;
+				  text-shadow:0em 0.1em 0 #000000;
+				  background-color:rgb(138, 10, 10);
+				  border-radius:2px;
+		
+			
+			  }
+			  .firstln p{
+				  font-size:23px;
+				  padding:20px;
+				  color:#6b97c0;
+				  text-shadow:0em 0.1em 0 #000000;
+				  height:58%;
+				  
+			  }
+			  
+			  .firstln h6{
+				  font-size:16px;
+				  text-align:left;
+				  padding:12px;
+				  color:#6b97c0;
+				  color:#6b97c0;
+				  height:20%;
+				
+				
+			  }
+			  .secondln{
+				font-size:19px;
+				width:80%;
+				 height:240px;
+				margin:20px;
+				border-radius:5%;
+				 box-shadow: 0 10px 0px 13px rgb(138, 10, 10);				}
+				.secondln h5{
+                 text-align:center;
+				 font-size:30px;
+				 padding:7px;
+				 color:#6b97c0;
+				  text-shadow:0em 0.1em 0 #000000;
+				  background-color:rgb(138, 10, 10);
+				  border-radius:2px;
+				 
+			  }
+			  .secondln p{
+				  font-size:23px;
+				  padding:20px;
+				  color:#6b97c0;
+				  text-shadow:0em 0.1em 0 #000000;
+				  height:58%;
+			  }
+			  .secondln h6{
+				  font-size:16px;
+				  text-align:left;
+				  padding:12px;
+				  height:20%;
+				  color:#6b97c0;
+				  text-shadow:0em 0.1em 0 #000000;
+			
+			  }
+				.thirdln{
+					font-size:19px;
+					width:80%;
+				 height:240px;
+				 margin:20px;
+				 border-radius:5%;
+				 box-shadow: 0 10px 0px 13px rgb(138, 10, 10);
+				}
+				.thirdln h5{
+                 text-align:center;
+				 font-size:30px;
+				 padding:7px;
+				 color:#6b97c0;
+				  text-shadow:0em 0.1em 0 #000000;
+				  background-color:rgb(138, 10, 10);
+				  border-radius:2px;
+			  }
+			  .thirdln p{
+				font-size:23px;
+				padding:20px;
+				color:#6b97c0;
+				  text-shadow:0em 0.1em 0 #000000;
+				  height:58%;
+			  }
+			  .thirdln h6{
+				  font-size:16px;
+				  text-align:left;
+				  padding:12px;
+				  height:20%;
+				  color:#6b97c0;
+				  text-shadow:0em 0.1em 0 #000000;	
+				  
+			  }
+			  /* ----------- Login Forms-------------- */
+			   .form {
+        width:100%;
+        height:470px;
+		
+       
+	
+       
+
+
+
+    }
+    .forms{
+
+        display:flex;
+         width:300px;
+         overflow:hidden;
+         position:absolute;
+		 right:7.5%;
+		 margin-top:-163%;
+		 border-radius: 10px;
+    }
+    .formtwo
+    {
+       width:100%;
+    
+    
+    }
+
+      .formbox{
+          width:100%;
+          height:100%;
+          
+      }
+      .register{
+          width:300px;
+		  height:100%;
+      
+      }
+      input{
+        width:100%;
+        float: left;
+        padding:7px 0;
+        border:none;
+        border-radius:10px;
+        background:none;
+        border:none;
+        border-bottom:3px solid #6b97c0;
+        outline:none;  
+        color:white;
+        padding-left:10px;
+        font-size:18px;
+      }
+      .registertable {
+        padding:22px 10px;
+        width:300px;
+        font-size: 17px;
+        box-shadow:0 0 10px 0 #000000;
+        height:100%;
+		margin:0%;
+        background:linear-gradient(to left,#232323,#003442,#232323);
+      
+        
+        
+       }
+       .login{
+          display:flex;
+          justify-content: center;
+          align-items: center;
+          width:300px;
+		  background:linear-gradient(to left,#232323,#003442,#232323);
+        
+          
+       }
+       .logintable{
+          display:flex;
+          padding:22px 10px;
+          width:300px;
+          height:100%;
+          justify-content: center;
+          align-items:center;
+          
+         
+         
+       }
+       .logintable td{
+           width:100vh;
+          
+       }
+       label{
+        color: #6b97c0;
+       }
+       #submit,#login{
+           width:100%;
+           background-color: rgb(138,10,10);
+           border:none;
+           margin:10px 0;
+           padding:4px 3px;
+       }
+       #submit:hover , #login:hover{
+           background-color:#6b97c0;
+           color:rgb(138,10,10);
+           font-weight:bold;
+           transition:0.2s ease-in-out;
+           box-shadow:0 0 10px 0 #000000;
+       }
+       #icon_login, #icon_login2, #icon_login3{
+          margin-left:-8%;
+           margin-top:5%; 
+           font-size: 13px;
+           position:absolute;
+           color:#6b97c0;
+       }
+				 
+				
+
+	@media only screen and (max-width:850px) {
+         
+	
+		.logo {
+
+           width:198px;
+			font-size:28px;
+			/* transform:translate(0,-100%); */
+	}
+      
+	
+
+		.nav {
+			width: 100%;
+			overflow: visible;
+			position: absolute;
+			background:linear-gradient(to left,#6b97c0);
+
+
+		}
+
+
+		.nav ul {
+			margin-top:0px;
+			text-align: center;
+			width: 100%;
+			position: absolute;
+			top: 0%;
+			display: flex;
+			flex-direction: column;
+			border-radius:0 0 20px 20px;
+	
+        
+		
+		}
+
+
+		.icon-box {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: end;
+		}
+
+		.nav ul li:not(:first-child) {
+			width: 100%;
+			opacity: 0%;
+			padding:3%;
+			background:#6b97c0;
+			position:relative;
+
+
+		}
+
+
+		.nav ul li a {
+			display: none;
+			animation:animate 660ms linear forwards;
+			transform-origin: top right;
+			color:#003442;
+
+		}
+		.form {
+        width:100%;
+        height:470px;
+		
+       
+	
+       
+
+
+
+    }
+    .forms{
+
+        display:flex;
+         width:300px;
+         overflow:hidden;
+         position:absolute;
+		 right:7.5%;
+		 border-radius: 10px;
+		 z-index:5;
+    }
+		@keyframes animate {
+			0%{transform:translate(-50%,0%);}
+			100%{transform:translate(0%,0%);}
+		} 
+
+		.btn {
+			width: 100%;
+		}
+
+		.icon {
+			display: block;
+			font-size: 21px;
+			margin-right: 7%;
+
+		}
+
+		.firstimg {
+			height: auto;
+			padding: 10px 0;
+			background:linear-gradient(to top, #003442,#6b97c0,#6b97c0);
+
+		}
+
+
+
+		.cake {
+			width:100%;
+			height: 420px;
+			margin-left: auto;
+			padding: 20px 0;
+
+		}
+
+		.button {
+			display: flex;
+			width: 100%;
+			justify-content: center;
+			align-items: center;
+			
+		}
+
+		.card {
+			margin-left: auto;
+			margin-right: auto;
+			padding: 30px;
+			height: 100%;
+			width:100%;
+			color: rgb(138, 10, 10);
+			margin-top: -30px;
+		}
+
+		.have {
+			color: white;
+			display: flex;
+			background:linear-gradient(to bottom,#003442,#232323);
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			word-wrap: break-word;
+		     margin-bottom:72px;
+	     
+
+
+		}
+
+		.que {
+			width:130%;
+			padding-bottom:30px;
+			
+		
+
+		
+		}
+
+		.btn2 {
+			width:130%;
+			margin-top: 5%;
+			margin-left: 0%;
+			padding: 10px auto;
+
+		}
+
+
+		.footer {
+			width: 100%;
+			height:100%;
+		
+		
+
+
+
+		}
+
+		.secondcard {
+
+			padding: 10px 30%;
+			
+
+		}
+		.atag {
+			color: #232323;
+		
+
+		}
+		.welc{
+			font-size:38px;
+			width:100%;
+			text-align:center;
+			padding-right: 1rem;
+			color:rgb(138, 10, 10);
+		    text-shadow: 0em 0.04em 0 #000000;
+
+		}
+
+		.text{
+			padding-top:30px;
+			text-align: center;
+			color:#6b97c0;
+			text-shadow: 0.01em 0.1em 0em #232323;
+			
+		}
+			 /* ----- video ----- */
+
+			 .videobox{
+				 overflow: scroll;
+			 }
+			 .video{
+	      
+		  width:100%;
+		  height:40vh;
+		  overflow:hidden;
+		  display: flex;
+				 justify-content: center;
+				 align-items: center;
+			
+		 
+			   
+		   }
+			   video{
+					 position:absolute;
+					 left:0;
+					 object-fit: cover;
+					 width:100%;
+					  height:61vh;
+					 pointer-events: none;
+					 overflow-x: hidden;
+				
+					 
+ 
+			   }
+			   .f-logos {
+		width:26%;
+		display: flex;
+		justify-content:space-between;
+		align-items: center;
+		padding-bottom:20%;
+
+	}
+			   .content{
+				 width:100%;
+				 height:100%;
+				 position:relative;
+				 z-index: 1;
+				 max-width: 100%;
+				 text-align: center;
+				 display: flex;
+				 justify-content: center;
+				 align-items: center;
+			   transform: translate(0%,-222px);
+			
+				 
+			 
+			   }
+			   .content h1{
+				   font-size:2.4em;
+				   text-align: center;
+				   margin-top:0px; margin-bottom:5%;
+				   color:#6b97c0;
+				   text-shadow:.0em .1em 0 #000000;
+				 
+				  
+			   }
+			
+			   .location-box
+			  {
+				  width:100%;
+				  height:100%;
+				 transform:translate(0,-13%);
+				  
+
+				  
+				  
+			  }
+			  .titleln{
+				  width:100%;
+				  text-align: center;
+				  font-size:40px;
+				  color:white;
+				  text-shadow:0em 0.1em 0 rgb(138, 10, 10);
+				  padding:30px;
+			  }
+			  .location
+			  {
+				  width:100%;
+				  display: flex;
+				  flex-wrap:wrap;
+				  align-items: center;
+				  padding:37px;
+				  
+				
+				 
+				
+			  }
+			  .firstln{
+			     font-size:19px;
+				 width:100%;
+				 height:240px;
+			     border-radius:5%;
+				 margin:25px 0px;
+				 box-shadow: 0 10px 0px 13px rgb(138, 10, 10);
+				 
+				 
+			  }
+		
+			  .firstln h5{
+                 text-align:center;
+				 font-size:30px;
+				 padding:7px;
+				 color:#6b97c0;
+				  text-shadow:0em 0.1em 0 #000000;
+				  background-color:rgb(138, 10, 10);
+				  border-radius:2px;
+		
+			
+			  }
+			  .firstln {
+				  font-size:23px;
+				  padding:20px;
+				  color:#6b97c0;
+				  text-shadow:0em 0.1em 0 #000000;
+				  
+			  }
+			  .firstln h6{
+				  font-size:16px;
+				  text-align:left;
+				  padding:12px;
+				
+				
+				
+			  }
+			  .secondln{
+				font-size:19px;
+				width:100%;
+				 height:240px;
+				margin:25px 0px;
+				border-radius:5%;
+				 box-shadow: 0 10px 0px 13px rgb(138, 10, 10);
+				}
+
+				.secondln h5{
+                 text-align:center;
+				 font-size:30px;
+				 padding:7px;
+				 color:#6b97c0;
+				  text-shadow:0em 0.1em 0 #000000;
+				  background-color:rgb(138, 10, 10);
+				  border-radius:2px;
+				 
+			  }
+			  .secondln p{
+				  font-size:23px;
+				  padding:20px;
+				  color:#6b97c0;
+				  text-shadow:0em 0.1em 0 #000000;
+			  }
+			  .secondln h6{
+				  font-size:16px;
+				  text-align:left;
+				  padding:12px;
+				  color:#6b97c0;
+				  text-shadow:0em 0.1em 0 #000000;
+			  }
+				.thirdln{
+					font-size:19px;
+					width:100%;
+				 height:240px;
+				 margin:25px 0px;
+				 border-radius:5%;
+				 box-shadow: 0 10px 0px 13px rgb(138, 10, 10);
+				}
+				.thirdln h5{
+                 text-align:center;
+				 font-size:30px;
+				 padding:7px;
+				 color:#6b97c0;
+				  text-shadow:0em 0.1em 0 #000000;
+				  background-color:rgb(138, 10, 10);
+				  border-radius:2px;
+			  }
+			  .thirdln p{
+				font-size:23px;
+				padding:20px;
+				color:#6b97c0;
+				  text-shadow:0em 0.1em 0 #000000;
+			  }
+			  .thirdln h6{
+				  font-size:16px;
+				  text-align:left;
+				  padding:12px;
+				  color:#6b97c0;
+				  text-shadow:0em 0.1em 0 #000000;	
+			  }
+
+
+	}
+
+	@media (max-width:850px) {
+		.nav.responsive {
+			position:relative;
+
+		}
+
+		.nav.responsive ul li:not(:first-child) {
+			opacity: 100%;
+		}
+
+		.nav.responsive ul li a {
+			float: left;
+			display: flex;
+			flex-direction: column;
+		
+		}
+	}
+
+	@media screen and (max-width:400px) {
+		.have {
+			color: white;
+			background-color: rgb(138, 10, 10);
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			word-wrap: break-word;
+
+
+		}
+
+		.que {
+			width: 220%
+		}
+
+		.btn2 {
+			width: 220%;
+			margin-top:15%;
+			margin-left: 0%;
+			padding:6px 2px;
+
+		}
+
+		.btn {
+			padding:2px 0px;
+		}
+		.text{
+			font-size:18px;
+		}
+
+	}
+</style>
+
+<body bgcolor="#6b97c0">
+	<script src="all.js"></script>
+	<script src="aos.js"></script>
+	<script>
+		AOS.init();
+		AOS.init({
+			duration: 1800,
+		});
+	</script>
+	<!-- ------- NAVBAR ------  -->
+
+	<nav class="nav" id="navigation">
+		<ul id="navbar">
+			<li class="logobox"><h2 class="logo"> Kittu Bakers </h2></li>
+			<li class="one"> <a href="about.html" id="one">About</a></li>
+			<li> <a href="cake.php" class="three" id="bar">Cakes</a></li>
+			<li class="two"> <a href="order.php" id="bar">Order</a></li>
+			<li class="icon_class"> <a href="#" class="icon_login" onclick="form()"> Sign in </a></li>
+			<li> <a href="review.html" class="four" id="bar"> review</a></li>
+		
+			
+
+		</ul>
+		<div class="icon-box">
+			<h2 class="icon" onclick="responsive()" style="color:#003442;"> ||| </h2>
+		</div>
+	</nav>
+	
+
+	<!-- ---------END OF NAVBAR--------- -->
+	<div class="forms" id="forms">
+		<div class="register">
+		  <form action="test.php" class="form" method="post">
+			  <table class="registertable" id="registertable">
+				  <tr><td><label for=""> First name </label></td><td><i class="fa-solid fa-xmark" style="color:#6b97c0; font-size:17px; margin-left:35%; opacity:50%; transform: translate(-5%,-10%);" onclick="document.getElementById('forms').style.marginTop='-163%'; "></i></td></tr>
+				  <tr><td colspan="2"><input type="text" id="firstname"  name="firstname" required pattern="[a-zA-Z\s]+"></td></tr>
+				  <tr><td colspan="2"><label for=""> Last name </label></td></tr>
+				  <tr><td colspan="2"><input type="text" id="lastname" name="lastname" required pattern="[a-zA-Z\s]+"></td></tr>
+				  <tr><td colspan="2"><label for=""> Email </label></td></tr>
+				  <tr><td colspan="2"><input type="Email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></td></tr>
+				  <tr><td colspan="2"><label for=""> Password </label></td></tr>
+				  <tr><td colspan="2"><input type="Password" id="password" name="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"><span><i class="fa fa-eye"  id="icon_login" onclick="logIn();" ></i></span></td></tr>
+				  <tr><td colspan="2"><label for=""> Confirm Password </label></td></tr>
+				  <tr><td colspan="2"><input type="Password" id="confirmpassword" name="confirmpassword" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"><span><i class="fa fa-eye"  id="icon_login2" onclick="logInTwo();"></i></span></td></tr>
+	
+				  <tr><td colspan="2" align="center" style="align-items: center;"><input type="submit" id="submit" onclick="validate();" name="submit" value="Register"></td></tr>
+				<tr>  <td colspan="2" align="center"> <h5 style="color:white;"> Already have an account ? <span style="color:#6b97c0" onclick="log_btn()"> Login here </span> </h5> </td></tr>
+				</table>
+		  </form>
+		</div>
+		<div class="login">
+		<form action="test.php" class="formtwo" method="post">
+			  <table class="logintable" id="logintable">
+				  <tr><td><label for=""> Email </label></td></tr>
+				  <tr><td><input type="Email" id="myemail" name="myemail" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></td></tr>
+				  <tr><td><label for=""> Password </label></td></tr>
+				  <tr><td><input type="Password" id="mypassword" name="mypassword" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"><span><i class="fa fa-eye"  id="icon_login3" onclick="logInThree();"></i></span></td></tr>
+	
+				  <tr><td align="center" style="align-items: center;"><input type="submit" id="login" onclick="validatetwo();" name="login" value="Log in"></td></tr>
+				  <tr> <td align="center"> <h5 style="color:white;"> Not yet a member ? <span style="color:#6b97c0" onclick="reg_btn()"> Sign up </span> </h5> </td></tr>
+				</table>
+		  </form>
+		</div>
+	</div>
+
+	<!--------- HEADER ------- -->
+	<div class="firstimg"><br><br><br>
+		
+		<img src="bg.gif" class="cake" data-aos="fade-right"></img>
+		<div class="card" data-aos="fade-left">
+			<h1 class="welc" id="welc"> Welcome to Kittu Bakers </h1>
+			<h6 class="text"> World Class Baking and Pastry Arts </h6>
+			<div class="button"><button class="btn" onclick="order()"> Order </button></div>
+		</div>
+	</div>
+
+	</script>
+
+	<!-- ---- have some question about our work --------  -->
+
+	<div class="have">
+
+		<div class="que" data-aos="fade-right">
+			<h1> Have some questions about our work ?</h1>
+		</div>
+		<button class="btn2" onclick="moreabout()" data-aos="fade-left"> MORE ABOUT US </button>
+
+	</div> 
+         <!-- ----------- video section -------------- -->
+		 <div class="videobox">
+		 <div class="video">
+             <video src="cake_video.mp4" class="cake_video" muted autoplay loop="loop"></video>
+			 
+		 </div>
+		 <div class="content">
+			<h1 data-aos="fade-down"> Fresh Ingredients Everyday </h1>
+		 </div>
+		 </div>
+
+        <!-- --------------------- Location ----------------------  -->
+
+		<div class="location-box">
+			<h2 class="titleln" data-aos="fade-up"> Locations </h2>
+			<div class="location">
+			<div class="firstln" data-aos="fade-down">
+				<h5> Naroda </h5>
+				<p>
+					24 Nr. Ashok Mill Naroda Road Ahmedabad 380025
+				</p>
+				<h6>
+					+91 99743 34893
+				</h6>
+			</div>
+			<div class="secondln" data-aos="fade-down">
+				<h5> S G Highway </h5>
+				<p>
+				behind Shivalik shilp center Iskcon cross road Ahmedabad 380051
+				</p>
+				<h6>
+					+91 77344 32438
+				</h6>
+			</div>
+			<div class="thirdln" data-aos="fade-down">
+				<h5> Khanpur </h5>
+				<p>
+					102, opp. Cama Motors Mirzapur area Ahmedabad 380021
+				</p>
+				<h6>
+					+91 99322 43843
+				</h6>
+			</div>
+			</div>
+		</div>
+	<!-- ------- FOOTER -------  -->
+	<footer class="footer">
+		<div class="firstcard" data-aos="fade-down">
+			<div class="logo-text">
+				<img src="logo.jfif" class="fimage"> </img>
+
+				<h2 class="b-text"> Kittu Bakers </h2>
+			</div>
+
+
+
+
+			<h5 class="copyright">Copyright @ 2022 Kittubakers</h5><br>
+			<h5><a href="#" class="atag"> Privacy Policy Terms of use</a></h5>
+			<br>
+			<center><div class="f-logos">
+				<a href="#" class="fab fa-twitter"></a>
+				<a href="#" class="fab fa-facebook"></a>
+				<a href="https://instagram.com/kartik_dhumal.__?utm_medium=copy_link" class="fab fa-instagram"></a>
+				<a href="#" class="fab fa-linkedin"></a>
+
+			</div>
+			</center>
+		</div>
+
+	</footer>
+	
+</body>
+
+</html>
